@@ -3,10 +3,23 @@
 let num = [2,3,6,7,9]
 
 function twoSum (num, target){
+    let newArr = []
     for(let i = 0; i < num.length; i++){
-        if(num[i] + num[i+1] == target){
-            return [i, i+1]
+        for(let j = i+1; j < num.length; j++){
+            if(num[i] + num[j] === target){
+                newArr.push(i)
+                newArr.push(j)   
+            }
+            }         
         }
+        return newArr
+    
     }
-}
-console.log(twoSum(num, 5))
+console.log(twoSum(num, 8))
+
+
+//Given an integer x, return true if x is palindrome integer.
+//An integer is a palindrome when it reads the same backward as forward.
+
+// let x = 121
+
