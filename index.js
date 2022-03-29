@@ -21,5 +21,16 @@ console.log(twoSum(num, 8))
 //Given an integer x, return true if x is palindrome integer.
 //An integer is a palindrome when it reads the same backward as forward.
 
-// let x = 121
 
+function reverseNum(num) {
+	if (
+    parseFloat(num.toString().split('').reverse()
+    .join('')) * Math.sign(num) == num){
+      return true
+    }else{
+      return false
+  }
+  
+}
+
+console.log(reverseNum(232))
